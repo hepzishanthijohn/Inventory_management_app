@@ -6,7 +6,7 @@ import { FaHome, FaTachometerAlt, FaPlus, FaListUl } from 'react-icons/fa'; // I
 const Sidebar = () => {
   return (
     <div className='sidebar'>
-      <Link to="/home" style={{textDecoration:"none"}}>
+      <Link to="/" style={{textDecoration:"none"}}>
         <div className="sidebar-item">
           <FaHome size={24} className='icons'/>
           <p>Home</p>

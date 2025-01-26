@@ -23,7 +23,7 @@ const ListProduct = () => {
 
     const fetchInfo = async () => {
         try {
-            const response = await axios.get('http://localhost:4000/api/products/getAllProducts');
+            const response = await axios.get('https://inventory-management-app-1-s0lo.onrender.com//api/products/getAllProducts');
             setAllProducts(response.data); // Assuming response.data is an array of products
         } catch (error) {
             console.error('Error fetching data:', error);
@@ -32,7 +32,7 @@ const ListProduct = () => {
 
     const removeProduct = async (id) => {
         try {
-            await axios.post('http://localhost:4000/api/products/removeproduct', { id: id }, {
+            await axios.post('https://inventory-management-app-1-s0lo.onrender.com//api/products/removeproduct', { id: id }, {
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
@@ -81,7 +81,7 @@ const ListProduct = () => {
                 formData.append('image', editedProductData.image);  // Add the image if it's being updated
             }
 
-            await axios.put(`http://localhost:4000/api/products/editproduct/${editingProduct}`, formData, {
+            await axios.put(`https://inventory-management-app-1-s0lo.onrender.com//api/products/editproduct/${editingProduct}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
